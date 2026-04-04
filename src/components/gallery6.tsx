@@ -13,7 +13,6 @@ import {
 interface GalleryItem {
   id: string;
   title: string;
-  summary: string;
   url: string;
   image: string;
 }
@@ -23,91 +22,71 @@ interface Gallery6Props {
 }
 
 const Gallery6 = ({
-  items = [
-    {
-      id: "item-1",
-      title: "Build Modern UIs",
-      summary:
-        "Create stunning user interfaces with our comprehensive design system.",
-      url: "#",
-      image: "/images/block/placeholder-dark-1.svg",
-    },
-    {
-      id: "item-2",
-      title: "Computer Vision Technology",
-      summary:
-        "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
-      url: "#",
-      image: "/images/block/placeholder-dark-1.svg",
-    },
-    {
-      id: "item-3",
-      title: "Machine Learning Automation",
-      summary:
-        "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
-      url: "#",
-      image: "/images/block/placeholder-dark-1.svg",
-    },
-    {
-      id: "item-4",
-      title: "Predictive Analytics",
-      summary:
-        "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-      url: "#",
-      image: "/images/block/placeholder-dark-1.svg",
-    },
-    {
-      id: "item-5",
-      title: "Neural Network Architecture",
-      summary:
-        "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-      url: "#",
-      image: "/images/block/placeholder-dark-1.svg",
-    },
-  ],
+  items = [{
+    id: "item-1",
+    title: "Build Modern UIs",
+    url: "#",
+    image: "/drink1.jpg",
+  },
+  {
+    id: "item-2",
+    title: "Computer Vision Technology",
+    url: "#",
+    image: "/drink2.jpg",
+  },
+  {
+    id: "item-3",
+    title: "Machine Learning Automation",
+    url: "#",
+    image: "/drink3.jpg",
+  },
+  {
+    id: "item-4",
+    title: "Predictive Analytics",
+    url: "#",
+    image: "/drink4.jpg",
+  },
+  {
+    id: "item-5",
+    title: "Neural Network Architecture",
+    url: "#",
+    image: "/drink5.jpg",
+  }
+],
 }: Gallery6Props) => {
   const [index, setIndex] = useState(0);
   const lastIndex = Math.max(0, items.length - 1);
 
   return (
-    <section className="py-32">
-      <div className="container">
-        <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
-          <div className="mt-8 flex shrink-0 items-center justify-start gap-2">
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => setIndex((i) => Math.max(0, i - 1))}
-              disabled={index === 0}
-              className="disabled:pointer-events-auto"
-            >
-              <ArrowLeft className="size-5" />
-            </Button>
-            <Button
-              size="icon"
-              variant="outline"
-              onClick={() => setIndex((i) => Math.min(lastIndex, i + 1))}
-              disabled={index >= lastIndex}
-              className="disabled:pointer-events-auto"
-            >
-              <ArrowRight className="size-5" />
-            </Button>
-          </div>
+    <section className="relative py-16">
+      <div className="px-6 lg:px-12 max-w-7xl mx-auto mb-8 flex justify-end">
+        <div className="flex shrink-0 items-center gap-2">
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => setIndex((i) => Math.max(0, i - 1))}
+            disabled={index === 0}
+            className="disabled:pointer-events-auto"
+          >
+            <ArrowLeft className="size-5" />
+          </Button>
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => setIndex((i) => Math.min(lastIndex, i + 1))}
+            disabled={index >= lastIndex}
+            className="disabled:pointer-events-auto"
+          >
+            <ArrowRight className="size-5" />
+          </Button>
         </div>
       </div>
-      <div className="w-full">
-        <Carousel
-          index={index}
-          onIndexChange={setIndex}
-          className="relative left-[-1rem]"
-        >
-          <CarouselContent className="-mr-4 ml-8 2xl:ml-[max(8rem,calc(50vw-700px+1rem))] 2xl:mr-[max(0rem,calc(50vw-700px-1rem))]">
+      <div className="px-6 lg:px-12">
+        <Carousel index={index} onIndexChange={setIndex}>
+          <CarouselContent className="-mr-4 ml-0">
             {items.map((item) => (
-              <CarouselItem key={item.id} className="pl-4 md:max-w-[452px]">
-                <a
-                  href={item.url}
-                  className="group flex flex-col justify-between"
-                >
+              <CarouselItem key={item.id} className="pl-4 md:max-w-[360px]">
+                <a href={item.url} className="group flex flex-col justify-between items-start">
                   <div>
                     <div className="flex aspect-[3/2] overflow-clip rounded-xl">
                       <div className="flex-1">
@@ -121,15 +100,11 @@ const Gallery6 = ({
                       </div>
                     </div>
                   </div>
-                  <div className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
+                  <div className="mb-2 line-clamp-3 break-words pt-3 text-base font-medium md:mb-3 md:text-lg">
                     {item.title}
                   </div>
-                  <div className="mb-8 line-clamp-2 text-sm text-muted-foreground md:mb-12 md:text-base lg:mb-9">
-                    {item.summary}
-                  </div>
-                  <div className="flex items-center text-sm">
-                    Read more{" "}
-                    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                  <div className="text-sm font-medium">
+                    1500 ₸ {">"}
                   </div>
                 </a>
               </CarouselItem>

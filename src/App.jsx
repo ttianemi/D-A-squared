@@ -15,10 +15,10 @@ function App() {
 
   return (
 		<div className="w-full">
-      <HeroSection />
+      		<HeroSection />
 			<Gallery6 />
 			<CarouselSize />
-      <Example />
+      		<Example />
 		</div>
 	);
 }
