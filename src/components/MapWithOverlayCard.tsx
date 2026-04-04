@@ -13,7 +13,7 @@ export function MapWithOverlayCard() {
   const [flyTarget, setFlyTarget] = useState<[number, number] | null>(null)
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-blue-800 px-4 py-8">
+    <div className="flex justify-center items-center min-h-screen px-4 py-8">
       {/* Container with padding from screen edges */}
       <div className="relative w-full max-w-60vh h-[90vh] rounded-3xl overflow-hidden">
 

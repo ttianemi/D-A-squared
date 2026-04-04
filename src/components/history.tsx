@@ -17,7 +17,7 @@ interface Gallery6Props {
   items?: GalleryItem[];
 }
 
-const Gallery6 = ({
+const History = ({
   items = [
     { id: "item-1", title: "Build Modern UIs", url: "#", image: "/drink1.jpg" },
     { id: "item-2", title: "Computer Vision Technology", url: "#", image: "/drink2.jpg" },
@@ -32,10 +32,10 @@ const Gallery6 = ({
         <Carousel>
           <CarouselContent className="-mr-4 ml-0">
             {items.map((item) => (
-              <CarouselItem key={item.id} className="pl-4 md:max-w-[360px]">
-                <a href={item.url} className="group flex flex-col justify-between items-start">
+              <CarouselItem key={item.id} className="pl-4 basis-full sm:basis-[calc(100%/5)]">
+                <a href={item.url} className="group flex flex-col justify-between items-stretch w-full">
                   <div>
-                    <div className="flex aspect-[3/2] overflow-clip rounded-xl">
+                  <div className="flex h-48 overflow-clip rounded-xl">
                       <div className="flex-1">
                         <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
                           <img
@@ -63,4 +63,4 @@ const Gallery6 = ({
   );
 };
 
-export { Gallery6 };
+export { History };

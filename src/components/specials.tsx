@@ -1,5 +1,9 @@
 "use client";
 
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -17,25 +21,48 @@ interface Gallery6Props {
   items?: GalleryItem[];
 }
 
-const Gallery6 = ({
-  items = [
-    { id: "item-1", title: "Build Modern UIs", url: "#", image: "/drink1.jpg" },
-    { id: "item-2", title: "Computer Vision Technology", url: "#", image: "/drink2.jpg" },
-    { id: "item-3", title: "Machine Learning Automation", url: "#", image: "/drink3.jpg" },
-    { id: "item-4", title: "Predictive Analytics", url: "#", image: "/drink4.jpg" },
-    { id: "item-5", title: "Neural Network Architecture", url: "#", image: "/drink5.jpg" },
-  ],
+const Specials = ({
+  items = [{
+    id: "item-1",
+    title: "Build Modern UIs",
+    url: "#",
+    image: "/drink1.jpg",
+  },
+  {
+    id: "item-2",
+    title: "Computer Vision Technology",
+    url: "#",
+    image: "/drink2.jpg",
+  },
+  {
+    id: "item-3",
+    title: "Machine Learning Automation",
+    url: "#",
+    image: "/drink3.jpg",
+  },
+  {
+    id: "item-4",
+    title: "Predictive Analytics",
+    url: "#",
+    image: "/drink4.jpg",
+  },
+],
 }: Gallery6Props) => {
+  const [index, setIndex] = useState(0);
+  const lastIndex = Math.max(0, items.length - 1);
+
   return (
-    <section className="relative py-16">
+    <section className="relative py-1">
+      <div className="px-6 lg:px-12 max-w-7xl mx-auto mb-8 flex justify-end">
+      </div>
       <div className="px-6 lg:px-12">
-        <Carousel>
+        <Carousel index={index} onIndexChange={setIndex}>
           <CarouselContent className="-mr-4 ml-0">
             {items.map((item) => (
-              <CarouselItem key={item.id} className="pl-4 md:max-w-[360px]">
+              <CarouselItem key={item.id} className="pl-4 basis-full sm:basis-1/2"              >
                 <a href={item.url} className="group flex flex-col justify-between items-start">
                   <div>
-                    <div className="flex aspect-[3/2] overflow-clip rounded-xl">
+                    <div className="flex aspect-[16/7] overflow-clip rounded-xl">
                       <div className="flex-1">
                         <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
                           <img
@@ -63,4 +90,4 @@ const Gallery6 = ({
   );
 };
 
-export { Gallery6 };
+export { Specials };
