@@ -26,7 +26,7 @@ export function HeroSection() {
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="h-12 rounded-full pl-5 pr-3 text-base bg-blue-500 hover:bg-blue-600">
+                                            className="h-12 rounded-full pl-5 pr-3 text-base bg-blue-700 hover:bg-blue-600">
                                             <Link to="#link">
                                                 <span className="text-nowrap">10</span>
                                                 <DrinkitLogo className="ml-2 h-5 w-5 fill-white" />
@@ -95,7 +95,7 @@ const HeroHeader = () => {
                         <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
                             {/* Logo + text lockup */}
                             <Link
-                                to="/"
+                                to="/location"
                                 aria-label="home"
                                 className="flex items-center gap-3">
                                 <DrinkitLogo className="h-9 w-9 shrink-0 fill-blue-700 hover:fill-blue-600" />
