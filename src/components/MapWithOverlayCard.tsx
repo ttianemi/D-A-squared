@@ -4,9 +4,22 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import { MapWithMarkers } from "@/components/ui/mapwithmarkers"
+import { lazy, Suspense } from "react";
+const MapWithMarkers = lazy(() => import("../components/ui/mapwithmarkers"));
 import { Progress } from './ui/progress'
 import { LogoPin } from "@/components/LogoPin"
+import L from "leaflet";
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import iconShadowUrl from "leaflet/dist/images/marker-shadow.png";
+import "leaflet/dist/leaflet.css";
+
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl,
+  shadowUrl: iconShadowUrl,
+  iconRetinaUrl: iconUrl,
+});
+
 
 export function MapWithOverlayCard() {
   const [cardOpen, setCardOpen] = useState(true)
@@ -16,8 +29,9 @@ export function MapWithOverlayCard() {
     <div className="flex justify-center items-center min-h-screen px-4 py-8">
       {/* Container with padding from screen edges */}
       <div className="relative w-full max-w-60vh h-[90vh] rounded-3xl overflow-hidden">
-
-        <MapWithMarkers flyTarget={flyTarget} />
+      <Suspense fallback={<div className="size-full min-h-96 rounded-md bg-muted animate-pulse"/>}>
+  <MapWithMarkers flyTarget={flyTarget} />
+</Suspense>
 
         <div
           className="absolute bottom-0 left-0 right-0 z-50 transition-transform duration-300"

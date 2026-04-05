@@ -14,7 +14,7 @@ function FlyToLocation({ target }: { target: [number, number] | null }) {
     return null
 }
 
-export function MapWithMarkers({ flyTarget }: { flyTarget?: [number, number] | null }) {
+export default function MapWithMarkers({ flyTarget }: { flyTarget?: [number, number] | null }) {
     const CITIES = [
         {
             name: "Kunayeva",
@@ -67,13 +67,15 @@ export function MapWithMarkers({ flyTarget }: { flyTarget?: [number, number] | n
     ]
 
     return (
-        <Map center={CITIES[3].coordinates} zoom={16}>
-            <MapTileLayer />
-            <MapZoomControl position="bottom-128 right-4" />
-            <FlyToLocation target={flyTarget ?? null} />
-            {CITIES.map((city) => (
-                <MapMarker key={city.name} position={city.coordinates} icon={<LogoPin />} />
-            ))}
-        </Map>
+        <div className="h-[500px] w-full">
+      <Map center={CITIES[3].coordinates} zoom={16}>
+        <MapTileLayer />
+        <MapZoomControl position="bottom-12 right-4" />
+        <FlyToLocation target={flyTarget ?? null} />
+        {CITIES.map((city) => (
+          <MapMarker key={city.name} position={city.coordinates} icon={<LogoPin />} />
+        ))}
+      </Map>
+    </div>
     )
 }
