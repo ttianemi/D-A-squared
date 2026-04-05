@@ -7,6 +7,9 @@ import CarouselSize from '../components/carouself'
 import Example from '../components/examples/example_stories'
 import CookieNotice from '../components/cookie-notice'
 import { motion, useInView } from "motion/react"
+import { Level } from '../components/ui/level'
+import DrinkitWrappedButton from "../components/DrinkitWrappedButton"
+
 import '../App.css'
 
 function Home() {
@@ -52,6 +55,15 @@ function Home() {
       </div>
       <Gallery6 />
 
+<div className="relative z-10 flex h-full items-center">
+                        <div className="mx-auto flex max-w-7xl w-full flex-col px-6 lg:block lg:px-12">
+                            <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left text-black">
+                                    <div className="w-full max-w-xs space-y-2">
+                                        <Level value={75} className="h-5" />
+                                    </div>
+                                </div>
+                            </div>
+
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto flex max-w-7xl w-full flex-col px-6 lg:block lg:px-12">
           <div className="mx-auto max-w-lg text-center lg:ml-0 lg:max-w-full lg:text-left text-black">
@@ -61,9 +73,9 @@ function Home() {
           </div>
         </div>
       </div>
+      </div>
       <History />
-      <CarouselSize />
-      <Example />
+      <DrinkitWrappedButton />
     </div>
   )
 }

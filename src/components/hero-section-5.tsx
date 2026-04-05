@@ -58,7 +58,7 @@ export function HeroSection() {
                                     </div>
 
                                     <div className="w-full max-w-xs space-y-2">
-                                        <Progress value={75} className="h-5" />
+                                        <Progress value={100} className="h-5" />
                                     </div>
                                 </div>
                             </div>
