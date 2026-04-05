@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Progress as ProgressPrimitive } from "radix-ui"
 import { cn } from "@/lib/utils"
+import { Button} from "@/components/ui/button"
 
 function Level({
   className,
@@ -13,10 +14,10 @@ function Level({
     <div className="w-full space-y-2">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm font-medium text-black">
-            {isComplete ? "Бесплатный напиток доступен" : "Белый уровень"}
+          <p className="text-xl font-medium text-black">
+            {isComplete ? "Бесплатный напиток доступен" : "Белый уровень ⚪"}
           </p>
-          <p className="text-xs text-black/60">
+          <p className="text-md text-black/60">
             {isComplete ? ":)" : "До следующего уровня..."}
           </p>
         </div>

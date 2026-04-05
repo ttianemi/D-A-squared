@@ -98,8 +98,8 @@ const HeroHeader = () => {
                                 className="flex items-center gap-3">
                                 <DrinkitLogo className="h-9 w-9 shrink-0 fill-blue-700 hover:fill-blue-600" />
                                 <span className="flex flex-col leading-tight text-[#E6ECEF] hover:text-white">
-                                    <span className="text-sm font-semibold tracking-tight">Drinkit location</span>
-                                    <span className="text-xs opacity-50">working hours</span>
+                                    <span className="text-sm font-semibold tracking-tight">ул. Бухар Жырау, 28Б</span>
+                                    <span className="text-xs opacity-80 text-left">Открыто до 23:00</span>
                                 </span>
                             </Link>
 

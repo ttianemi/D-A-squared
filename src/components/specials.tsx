@@ -24,25 +24,25 @@ interface Gallery6Props {
 const Specials = ({
   items = [{
     id: "item-1",
-    title: "Build Modern UIs",
+    title: "3 китика за Какао с мисо-карамелью",
     url: "#",
     image: "/drink1.jpg",
   },
   {
     id: "item-2",
-    title: "Computer Vision Technology",
+    title: "2 китика за Айс чёрный кофе",
     url: "#",
     image: "/drink2.jpg",
   },
   {
     id: "item-3",
-    title: "Machine Learning Automation",
+    title: "Купи 3 напитка и получи 4 китика",
     url: "#",
     image: "/drink3.jpg",
   },
   {
     id: "item-4",
-    title: "Predictive Analytics",
+    title: "3 Китика за Бамбл кофе",
     url: "#",
     image: "/drink4.jpg",
   },

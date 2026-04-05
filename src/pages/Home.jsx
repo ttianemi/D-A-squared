@@ -18,10 +18,8 @@ function Home() {
 
   return (
     <div className="w-full">
+    <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
       <HeroSection />
-
-      {/* Invisible trigger — fires when scrolled past hero */}
-
 
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto flex max-w-7xl w-full flex-col px-6 lg:block lg:px-12">

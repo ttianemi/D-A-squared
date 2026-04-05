@@ -11,21 +11,21 @@ const drinkItems = [
     title: "Клубничный Матча Латте",
     image: "/drink1.jpg",
     price: "1500 ₸",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Был куплен тобой 132 раза за этот год! Вот он - самый настоящий фанат матчи",
   },
   {
     id: "item-2",
-    title: "Манговый Смузи",
+    title: "Вы - Освежающий классик",
     image: "/drink2.jpg",
-    price: "1800 ₸",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: "",
+    description: "Вы любите айс версии напитков больше обычного. За этот меясц вы купили 12 холодных напитков.",
   },
   {
     id: "item-3",
-    title: "Холодный Brew",
+    title: "Топ 3% фанатов матчи",
     image: "/drink3.jpg",
-    price: "1200 ₸",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    price: "",
+    description: "Поразительно!",
   },
 ];
 

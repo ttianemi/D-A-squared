@@ -19,11 +19,11 @@ interface Gallery6Props {
 
 const Gallery6 = ({
   items = [
-    { id: "item-1", title: "Build Modern UIs", url: "#", image: "/drink1.jpg" },
-    { id: "item-2", title: "Computer Vision Technology", url: "#", image: "/drink2.jpg" },
-    { id: "item-3", title: "Machine Learning Automation", url: "#", image: "/drink3.jpg" },
-    { id: "item-4", title: "Predictive Analytics", url: "#", image: "/drink4.jpg" },
-    { id: "item-5", title: "Neural Network Architecture", url: "#", image: "/drink5.jpg" },
+    { id: "item-1", title: "Айс американо", url: "#", image: "/drink1.jpg" },
+    { id: "item-2", title: "Кофе-тоник ", url: "#", image: "/drink2.jpg" },
+    { id: "item-3", title: "Какао с сырной пенкой ", url: "#", image: "/drink3.jpg" },
+    { id: "item-4", title: "Холодный Бамбл кофе", url: "#", image: "/drink4.jpg" },
+    { id: "item-5", title: "Бамбл кофе", url: "#", image: "/drink5.jpg" },
   ],
 }: Gallery6Props) => {
   return (

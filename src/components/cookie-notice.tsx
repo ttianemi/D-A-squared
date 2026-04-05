@@ -37,7 +37,7 @@ export default function CookieNotice() {
                 onClick={() => setVisible(false)}
                 className={cn(
                   "rounded-lg px-4 py-1 text-white",
-                  "bg-primary hover:bg-primary/90"
+                  "bg-blue-700 hover:bg-blue-500"
                 )}
               >
                 Заказать
